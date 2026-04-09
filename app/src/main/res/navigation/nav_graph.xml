@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studyListFragment">
+
+    <fragment
+        android:id="@+id/studyListFragment"
+        android:name="com.example.studyplanner.StudyListFragment"
+        android:label="Study List">
+        <action
+            android:id="@+id/action_studyListFragment_to_editStudyFragment"
+            app:destination="@id/editStudyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addStudyFragment"
+        android:name="com.example.studyplanner.AddStudyFragment"
+        android:label="Add Study" />
+
+    <fragment
+        android:id="@+id/editStudyFragment"
+        android:name="com.example.studyplanner.EditStudyFragment"
+        android:label="Edit Study">
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
